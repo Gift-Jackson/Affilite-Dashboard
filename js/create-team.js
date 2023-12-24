@@ -40,15 +40,44 @@ prevBtn_2.addEventListener('click', () => {
 
 // dynamic email field
 const addBtn = document.querySelector(".add-more-btn");
+const removeBtn = document.querySelector(".remove-btn");
 const inputField = document.querySelector(".field");
+const alertMsg = document.querySelector(".alertMsg")
+let emailCount = 1; // Initial count
 
 function addField() {
-    const email = document.createElement("input");
-    email.type = "email";
-    email.placeholder = "E-mail Address";
-    email.name = "email";
+    if (emailCount < 5) {
+        const email = document.createElement("input");
+        email.type = "email";
+        email.placeholder = "E-mail Address";
+        email.name = `email${emailCount + 1}`;
 
-    inputField.appendChild(email)
+        inputField.appendChild(email);
+        emailCount++;
+    } else {
+        // alert("You can add a maximum of 5 email inputs.");
+        alertMsg.classList.add("active")
+        alertMsg.innerHTML =  "You can add a maximum of 5 email inputs.";
+        setTimeout(()=>{
+            alertMsg.classList.remove("active");
+        }, 2500)
+    }
+}
+
+function removeField() {
+    if (emailCount > 1) {
+        const lastEmail = inputField.lastElementChild;
+        inputField.removeChild(lastEmail);
+        emailCount--;
+    } else {
+        // alert("You must have at least one email input.");
+        alertMsg.classList.add("active")
+        alertMsg.innerHTML =  "You must have at least one email input.";
+        setTimeout(()=>{
+            alertMsg.classList.remove("active");
+        }, 2500)
+    }
 }
 
 addBtn.addEventListener("click", addField);
+removeBtn.addEventListener("click", removeField);
