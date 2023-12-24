@@ -413,14 +413,13 @@ nav ul a b {
     background-color: var(--color-primary);
     border-radius: 1rem 1rem 0 0;
 }
-
 th {
     padding: .8rem;
     text-align: left;
     color: #fefefe;
 }
 
-tbody {
+.table-container tbody {
     background-color: var(--color-background);
 }
 
@@ -440,6 +439,16 @@ tr:nth-child(even) {
     color: #fefefe;
     cursor: pointer;
     padding: .5rem 1rem;
+}
+
+.no-data{
+    background-color: var(--color-secondary);
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+.no-data img{
+    height: 200px;
 }
 
 .dark-bg {

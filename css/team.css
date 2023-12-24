@@ -19,7 +19,9 @@
 }
 
 .no-team-container,
-.unavailable {
+.unavailable,
+.no-notification-container,
+.no-product {
     background-color: var(--color-secondary);
     padding: 1rem;
     width: 400px;
@@ -29,7 +31,10 @@
 }
 
 .no-team-container img,
-.unavailable img {
+.unavailable img,
+.no-data img,
+.no-notification-container img,
+.no-product img {
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -355,8 +360,11 @@
     }
 
     .no-team-container,
-    .teamModal,
-    .unavailable {
+    .teamModal, 
+    .unavailable,
+    .no-data,
+    .no-notification-container,
+    .no-product {
         width: 100%;
     }
 }
