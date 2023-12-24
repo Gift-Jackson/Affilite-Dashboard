@@ -355,7 +355,8 @@
     }
 
     .no-team-container,
-    .teamModal {
+    .teamModal,
+    .unavailable {
         width: 100%;
     }
 }
