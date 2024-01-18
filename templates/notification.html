@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/team.css">
     <link rel="stylesheet" href="../css/plug-in.css">
     <link rel="stylesheet" href="../css/transition.css">
+    <link rel="stylesheet" href="../css/notification.css">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -256,12 +257,51 @@
 
             <main id="content">
                 <div class="container">
-                    <div class="no-notification-container">
-                        <img src="../assets/notification.svg" alt="No_Notification">
-                        <p>
-                            No Notification Yet!
-                        </p>
+                    <div class="notification-container">
+                        <div class="notification-box">
+                            <div class="title">
+                                <h3>Withdrawal</h3>
+                            </div>
+                            <p class="message">
+                                You have successfully withdrawn &#8358;7500 from your account!
+                            </p>
+                            <div class="timestamp">
+                                Just now
+                            </div>
+                        </div>
+                        <div class="notification-box">
+                            <div class="title">
+                                <h3>Withdrawal</h3>
+                            </div>
+                            <p class="message">
+                                You have successfully withdrawn &#8358;20000 from your account!
+                            </p>
+                            <div class="timestamp">
+                                09/11/2024 9:22am
+                            </div>
+                        </div>
+                        <div class="notification-box">
+                            <div class="title">
+                                <h3>Sales</h3>
+                            </div>
+                            <p class="message">
+                                You have successfully sold a product for &#8358;15000 to John Doe!
+                            </p>
+                            <div class="timestamp">
+                                Today 12:05pm
+                            </div>
+                        </div>
                     </div>
+
+                    
+                    <template>
+                        <div class="no-notification-container">
+                            <img src="../assets/notification.svg" alt="No_Notification">
+                            <p>
+                                No Notification Yet!
+                            </p>
+                        </div>
+                    </template>
                 </div>
             </main>
         </div>
